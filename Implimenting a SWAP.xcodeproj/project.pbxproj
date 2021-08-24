@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6FE4046326D48F04009F23A7 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 6FE4046226D48F04009F23A7 /* main.c */; };
-		6FE4046A26D48F15009F23A7 /* checksum.c in Sources */ = {isa = PBXBuildFile; fileRef = 6FE4046926D48F15009F23A7 /* checksum.c */; };
+		6FE4047026D48FCE009F23A7 /* test_swap_server.c in Sources */ = {isa = PBXBuildFile; fileRef = 6FE4046B26D48FCD009F23A7 /* test_swap_server.c */; };
+		6FE4047126D48FCE009F23A7 /* sdp.c in Sources */ = {isa = PBXBuildFile; fileRef = 6FE4046C26D48FCD009F23A7 /* sdp.c */; };
+		6FE4047226D48FCE009F23A7 /* swap_client.c in Sources */ = {isa = PBXBuildFile; fileRef = 6FE4046D26D48FCD009F23A7 /* swap_client.c */; };
+		6FE4047326D48FCE009F23A7 /* swap_server.c in Sources */ = {isa = PBXBuildFile; fileRef = 6FE4046E26D48FCE009F23A7 /* swap_server.c */; };
+		6FE4047426D48FCE009F23A7 /* test_swap_client.c in Sources */ = {isa = PBXBuildFile; fileRef = 6FE4046F26D48FCE009F23A7 /* test_swap_client.c */; };
+		6FE4047A26D4903A009F23A7 /* checksum.c in Sources */ = {isa = PBXBuildFile; fileRef = 6FE4047926D4903A009F23A7 /* checksum.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,8 +29,12 @@
 
 /* Begin PBXFileReference section */
 		6FE4045F26D48F04009F23A7 /* Implimenting a SWAP */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Implimenting a SWAP"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6FE4046226D48F04009F23A7 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
-		6FE4046926D48F15009F23A7 /* checksum.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = checksum.c; sourceTree = "<group>"; };
+		6FE4046B26D48FCD009F23A7 /* test_swap_server.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = test_swap_server.c; sourceTree = "<group>"; };
+		6FE4046C26D48FCD009F23A7 /* sdp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sdp.c; sourceTree = "<group>"; };
+		6FE4046D26D48FCD009F23A7 /* swap_client.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = swap_client.c; sourceTree = "<group>"; };
+		6FE4046E26D48FCE009F23A7 /* swap_server.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = swap_server.c; sourceTree = "<group>"; };
+		6FE4046F26D48FCE009F23A7 /* test_swap_client.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = test_swap_client.c; sourceTree = "<group>"; };
+		6FE4047926D4903A009F23A7 /* checksum.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = checksum.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,8 +67,12 @@
 		6FE4046126D48F04009F23A7 /* Implimenting a SWAP */ = {
 			isa = PBXGroup;
 			children = (
-				6FE4046926D48F15009F23A7 /* checksum.c */,
-				6FE4046226D48F04009F23A7 /* main.c */,
+				6FE4046C26D48FCD009F23A7 /* sdp.c */,
+				6FE4046D26D48FCD009F23A7 /* swap_client.c */,
+				6FE4046E26D48FCE009F23A7 /* swap_server.c */,
+				6FE4046F26D48FCE009F23A7 /* test_swap_client.c */,
+				6FE4046B26D48FCD009F23A7 /* test_swap_server.c */,
+				6FE4047926D4903A009F23A7 /* checksum.c */,
 			);
 			path = "Implimenting a SWAP";
 			sourceTree = "<group>";
@@ -121,8 +133,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6FE4046A26D48F15009F23A7 /* checksum.c in Sources */,
-				6FE4046326D48F04009F23A7 /* main.c in Sources */,
+				6FE4047126D48FCE009F23A7 /* sdp.c in Sources */,
+				6FE4047026D48FCE009F23A7 /* test_swap_server.c in Sources */,
+				6FE4047A26D4903A009F23A7 /* checksum.c in Sources */,
+				6FE4047326D48FCE009F23A7 /* swap_server.c in Sources */,
+				6FE4047226D48FCE009F23A7 /* swap_client.c in Sources */,
+				6FE4047426D48FCE009F23A7 /* test_swap_client.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
