@@ -17,6 +17,7 @@ extern int swap_disconnect(int sd);
 extern int sdp_send(int sd, char *buf, int length);
 extern int sdp_receive(int sd, char *buf);
 extern int sdp_receive_with_timer(int sd, char *buf, unsigned int expiration);
+extern short checksum(unsigned char buf[], int length);
 
 int session_id = 0;
 int R = 0;	// frame number to receive
@@ -34,7 +35,7 @@ int swap_wait(unsigned short port)
 	*	accept a connection
 	*/
 
-	session_id = swap_accept(port);	// in sdp.o
+	session_id = swap_accept(port);	// in sdp.open
 
 	/*
 	*	return a ssession id
@@ -46,7 +47,8 @@ int swap_wait(unsigned short port)
 int swap_read(int sd, char *buf)
 {
 	int	n;
-	char	frame[MAXFRAME];
+	char frame[MAXFRAME];
+    
 
 	if (session_id == 0 || sd != session_id)
 		return -1;
@@ -54,20 +56,20 @@ int swap_read(int sd, char *buf)
 	/*
 	*	receive a frame without a timer
 	*/
-
-	// ...
+    n = sdp_receive(sd, frame);
 
 	/*
 	*	several cases
 	*/
 
-	// ...
-
+	
 	/*
 	*	copy the data field in the frame into buf, and return the length
 	*/
-
-	// ...
+    bzero(buf, sizeof(buf));
+    strcpy(buf, frame);
+    return sizeof(buf);
+	
 }
 
 void swap_close(int sd)

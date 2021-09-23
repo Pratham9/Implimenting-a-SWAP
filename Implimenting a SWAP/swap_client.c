@@ -8,6 +8,9 @@
 #include <sys/socket.h>
 #include <sys/types.h>
 #include <netinet/in.h>
+#include <unistd.h>
+#include <sys/wait.h>
+#include <sys/time.h>
 
 #define	MAXLINE 128	// maximum characters to receive and send at once
 #define	MAXFRAME 256
@@ -59,15 +62,12 @@ int swap_write(int sd, char *buf, int length)
 	/*
 	*	send a DATA frame
 	*/
-
-	// ...
+    n = sdp_send(sd, frame, strlen(frame));
 
 	/*
 	*	read a frame with a timer
 	*/
-
-	// ...
-
+    sdp_receive_with_timer(sd, buf, 50);
 	/*
 	*	several different cases including disconnection
 	*/
@@ -77,6 +77,7 @@ int swap_write(int sd, char *buf, int length)
 	/*
 	*	return the length sent
 	*/
+    return n;
 
 	// ...
 }

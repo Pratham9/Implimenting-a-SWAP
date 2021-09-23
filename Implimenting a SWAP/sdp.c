@@ -166,9 +166,9 @@ int swap_connect(unsigned int addr, unsigned short port)
 {
 	struct	sockaddr_in	servaddr;	// server address
 	char	buf[MAXLINE];
-	int	len, n;
+	int	n;
 
-	if ((sockfd = socket(AF_INET, SOCK_DGRAM, 0)) < 0) {
+	if ((sockfd = socket(PF_INET, SOCK_DGRAM, 0)) < 0) {
 		printf("swap_connect: can not open a socket\n");
 		return -1;
 	}
